@@ -46,7 +46,7 @@ export function Calc() {
             return new Intl.NumberFormat('en-US', {
                 style: 'decimal',
                 minimumFractionDigits: 0,
-                maximumFractionDigits: 3,
+                maximumFractionDigits: 4,
             }).format(result);
         } else {
             return '';
@@ -93,7 +93,7 @@ export function Calc() {
             button.click();
         }
         if (['+', '-', '*', '/', '.', 'Escape', '=', 'd', 'e', 'a', 's', 'x', 'c',
-            'Backspace', 'Delete', 'b', 'q', 'w'].includes(event.key)) {
+            'Backspace', 'Delete', 'b', 'r', 't', 'f', 'g'].includes(event.key)) {
             const mapper = {
                 '+': 'Add',
                 'a': 'Add',
@@ -111,8 +111,10 @@ export function Calc() {
                 'Backspace': 'Undo',
                 'Delete': 'Undo',
                 'b': 'Undo',
-                'q': '00',
-                'w': '000',
+                'r': '00',
+                'f': '00',
+                't': '000',
+                'g': '000',
             }
             const button = document.getElementById('button' + mapper[event.key]);
             button.click();
@@ -127,13 +129,14 @@ export function Calc() {
     return (
         <>
             <div className="grid grid-cols-4 gap-2 w-80">
-                <div className="border-2 border-stone-300 rounded-md mb-1 px-1 h-20 bg-gray-300 col-span-4 text-right overflow-x-auto"
+                <div className="border-2 border-stone-300 rounded-md mb-1 px-1 h-20 bg-gray-300 col-span-4 text-right text-2xl overflow-x-auto"
                 >{formatInput(input)}</div>
 
                 <div className="grid grid-cols-8 w-80 col-span-4">
 
-                    <div className="border-2 border-green-600 rounded-l-md col-span-1 mb-2 px-1 h-10 bg-green-600 text-white text-left">=</div>
-                    <div className="border-2 border-green-600 rounded-r-md mb-2 px-1 h-10 bg-green-600 text-white col-span-7 text-right">
+                    <div className="border-2 border-green-600 rounded-l-md col-span-1 mb-2 px-1 h-10 bg-green-600 text-white text-left text-2xl">=</div>
+                    <div className="border-2 border-green-600 rounded-r-md mb-2 px-1 h-10 
+                        bg-green-600 text-white col-span-7 text-right text-2xl">
                         {error ? 'Error' : formatResult(result)}
                     </div>
                 </div>
@@ -377,9 +380,10 @@ export function Calc() {
                 {/*  add more buttons later -> "+/-"  "("  ")" "<" "<<" "Prev Ans? %" */}
             </div>
             <div onClick={openHelpModal} className="flex mt-2 cursor-pointer">
-                <img className="pt-1 px-1 h-6" style={{display: 'inline'}} src={keyboardlogo} alt="keyboard shortcuts" />
+                <img className="pt-1 px-1 h-6" style={{ display: 'inline' }} src={keyboardlogo} alt="keyboard shortcuts" />
                 <div className="pt-1 font-mono text-base">Keyboard Shortcuts</div>
-                </div>
+            </div>
+            <a href="https://github.com/codifyer/simple-react-redux-calculator" target="_blank">Source Code</a>
         </>
 
     )

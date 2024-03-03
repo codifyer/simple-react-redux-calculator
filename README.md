@@ -14,13 +14,13 @@ This is a simple calculator built using react, redux and tailwind.
 |--------------|-----------|
 | `0` to `9` | `0` to `9`  |
 |`.`| `.`|
-|`00`| `q`|
-|`000`|`w`|
+|`00`| `r` or `f`|
+|`000`|`t` or `g`|
 |`+`|`+` or `a` (add)|
 |`-`|`-` or `s` (subtract)|
 |`*`|`*` or `x`|
 |`/`|`/` or `d` (divide)|
-|⌫ | `BackSpace` or `Delete` or `b`|
+|`⌫` | `BackSpace` or `Delete` or `b`|
 |`=`| `=` or `e`|
 |`AC`| `Esc` or `c`|
 

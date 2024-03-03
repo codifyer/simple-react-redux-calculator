@@ -3,7 +3,6 @@
 export function dotRules(input) {
     const re = /[0-9]+([.][0-9]*)?|([.][0-9]*)|[\+\-\*\/]/g
     const tokens = input.match(re);
-    console.log(tokens);
     if (tokens === null 
         || ["+", "-", "*", "/"].includes(tokens.slice(-1)[0])
         ) { 
@@ -26,7 +25,6 @@ export function dotRules(input) {
 export function mulZeroRules(input) {
     const re = /[0-9]+([.][0-9]*)?|([.][0-9]*)|[\+\-\*\/]/g
     const tokens = input.match(re);
-    console.log(tokens);
     if (tokens === null || ["+", "-", "*", "/"].includes(tokens.slice(-1)[0])) {
         return {
             status: 'replace',
@@ -46,7 +44,6 @@ export function mulZeroRules(input) {
 export function zeroRules(input) {
     const re = /[0-9]+([.][0-9]*)?|([.][0-9]*)|[\+\-\*\/]/g
     const tokens = input.match(re);
-    console.log(tokens);
     if (
         tokens === null
         || ["+", "-", "*", "/"].includes(tokens.slice(-1)[0])
@@ -69,7 +66,6 @@ export function zeroRules(input) {
 export function operatorRules(input) {
     const re = /[0-9]+([.][0-9]*)?|([.][0-9]*)|[\+\-\*\/]/g
     const tokens = input.match(re);
-    console.log(tokens);
     if (tokens === null ) {
         return {
             status: 'ignore',
@@ -88,7 +84,6 @@ export function operatorRules(input) {
 export function numberRules(input) {
     const re = /[0-9]+([.][0-9]*)?|([.][0-9]*)|[\+\-\*\/]/g
     const tokens = input.match(re);
-    console.log(tokens);
     if (tokens === null 
         || ["+", "-", "*", "/"].includes(tokens.slice(-1)[0])
         ) {

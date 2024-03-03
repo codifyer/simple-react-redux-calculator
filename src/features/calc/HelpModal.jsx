@@ -67,13 +67,21 @@ export default function HelpModel({ isOpen, onClose }) {
                     <tr>
                         <td><span className="px-1 bg-blue-500 rounded-md text-white">00</span></td>
                         <td className="px-2 text-left">
-                            <span className="ml-2"><span className="px-1 bg-slate-300 rounded-md text-slate-600">q</span></span>
+                            <span className="ml-2">
+                                <span className="px-1 bg-slate-300 rounded-md text-slate-600">r</span>
+                                <span className="px-1 text-sm">or</span>
+                                <span className="px-1 bg-slate-300 rounded-md text-slate-600">f</span>
+                            </span>
                         </td>
                     </tr>
                     <tr>
                         <td><span className="px-1 bg-blue-500 rounded-md text-white">000</span></td>
                         <td className="px-2 text-left">
-                            <span className="ml-2"><span className="px-1 bg-slate-300 rounded-md text-slate-600">w</span></span>
+                            <span className="ml-2">
+                                <span className="px-1 bg-slate-300 rounded-md text-slate-600">t</span>
+                                <span className="px-1 text-sm">or</span>
+                                <span className="px-1 bg-slate-300 rounded-md text-slate-600">g</span>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -157,7 +165,7 @@ export default function HelpModel({ isOpen, onClose }) {
 
                 </tbody>
             </table>
-            <button onClick={handleCloseModal} 
+            <button onClick={handleCloseModal}
                 className="mt-2 mb-4 px-2 bg-yellow-800 hover:bg-yellow-600 border-0 text-sm h-5 rounded shadow border-yellow-800 text-white">
                 Close (Esc)
             </button>
